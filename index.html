@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cruds</title>
+</head>
+
+<body>
+
+
+<div class="container my-4">
+<label for="productName">productName:</label>
+<input type="text" class="form-control mb-4" id="productName">
+<label for="productPrice">productPrice:</label>
+<input type="text" class="form-control mb-4" id="productPrice">
+<label for="productCategory">productCategory:</label>
+<input type="text" class="form-control mb-4" id="productCategory">
+<label for="productDesc">productDesc:</label>
+<input type="text" class="form-control mb-4" id="productDesc">
+
+<button id="addBtn" onclick="addProduct()" class="btn d-block btn-info w-100">Add Product</button>
+<button id="updateBtn" onclick="updatedIndex()" class="btn mt-3 d-none btn-warning w-100">Update Product</button>
+
+
+</div>
+<div class="w-75 mx-auto my-4 text-center">
+    <input type="text" placeholder="Search for name" oninput="searchProducts(this.value)" class="form-control w-75 my-5 mx-auto">
+    <table class="table">
+        <thead>
+            <th>Name</th>
+            <th>price</th>
+            <th>Category</th>
+            <th>Desc</th>
+            <th>Update</th>
+            <th>Delete</th>
+            <th>Time</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+</div>
+
+ 
+
+
+
+
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/type.js"></script>
+</body>
+
+</html>
