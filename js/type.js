@@ -57,7 +57,15 @@ function Display(arr){
 document.getElementById("tableBody").innerHTML=box;
 }
 
-
+function searchProducts(term){
+    var matchedProducts = [];
+    for(var i=0 ; i<Products.length;i++){
+        if (Products[i].name.toLowerCase().includes(term.toLowerCase())){
+            matchedProducts.push(Products[i]);
+    }
+}
+Display(matchedProducts);
+}
 
 
 function clearForm(){
@@ -75,15 +83,7 @@ Display(Products);
 }
 
 
-function searchProducts(term){
-    var matchedProducts = [];
-    for(var i=0 ; i<Products.length;i++){
-        if (Products[i].name.toLowerCase().includes(term.toLowerCase())){
-            matchedProducts.push(Products[i]);
-    }
-}
-Display(matchedProducts);
-}
+
 
 
 
